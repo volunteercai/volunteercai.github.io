@@ -274,7 +274,8 @@
           
 
   
-    <div class="comments" id="giteement"></div>
+    <div id="giteementDiv"></div>
+    <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
     
     
     <script src="/blog/lib/giteement/giteement.browser.js"></script>
@@ -290,7 +291,7 @@
           client_secret: '<%=theme.giteement.client_secret%>'
         },
       })
-      giteement.render('giteement')
+      giteement.render('giteementDiv')
     </script>
 
   
