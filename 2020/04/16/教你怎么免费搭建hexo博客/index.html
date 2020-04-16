@@ -383,24 +383,21 @@
   
     <div id="giteementDiv"></div>
     <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
-    
-    
-    <script src="/blog/lib/giteement/giteement.browser.js"></script>
+    <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
     <script>
       var giteement = new Giteement({
-        id: '<%=page.date.format('YYYYMMDDHHmmss')%>',
-        owner: '<%=theme.giteement.gitee_id%>',
-        repo: '<%=theme.giteement.repo%>',
-        backcall_uri: '<%=theme.giteement.redirect_uri%>',
-        oauth_uri: '<%=theme.giteement.oauth_uri%>',
+        id: 20200416114609,
+        owner: caixy,
+        repo: blog,
+        backcall_uri: https://caixy.gitee.io/blog,
+        oauth_uri: https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token,
         oauth: {
-          client_id: '<%=theme.giteement.client_id%>',
-          client_secret: '<%=theme.giteement.client_secret%>'
+          client_id: 4e3cc1236a828fbdd8bc90fb73508dd07e8249018237718eaad5f6c24381ea9b,
+          client_secret: fc8190ed7c1c7de4231c36bc6aaa915844ccdb9af96aa3503b2bc1db8077e3bc
         },
-      })
-      giteement.render('giteementDiv')
+      });
+      giteement.render('giteementDiv');
     </script>
-
   
 
 
