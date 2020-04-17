@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git常用命令总结分享</title>
-    <url>/blog/2020/04/17/git%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h2><h3 id="保存账户密码"><a href="#保存账户密码" class="headerlink" title="保存账户密码"></a>保存账户密码</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改远端地址"><a href="#修改远端地址" class="headerlink" title="修改远端地址"></a>修改远端地址</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote origin set-url [url]</span><br><span class="line">git remote rm origin</span><br><span class="line">git remote add origin [url]</span><br></pre></td></tr></table></figure>
-
-<h3 id="git查看远程仓库地址命令"><a href="#git查看远程仓库地址命令" class="headerlink" title="git查看远程仓库地址命令"></a>git查看远程仓库地址命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
-
-<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git checkout -b &lt;local branch name&gt; origin/&lt;origin branch name&gt;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea 热部署插件jrebel 的 安装 和 激活</title>
     <url>/blog/2020/04/17/Jrebel%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%BF%80%E6%B4%BB/</url>
     <content><![CDATA[<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>Preference-&gt;Plugins</p>
@@ -42,6 +22,26 @@
         <tag>idea</tag>
         <tag>插件</tag>
         <tag>jrebel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git常用命令总结分享</title>
+    <url>/blog/2020/04/17/git%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h2><h3 id="保存账户密码"><a href="#保存账户密码" class="headerlink" title="保存账户密码"></a>保存账户密码</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改远端地址"><a href="#修改远端地址" class="headerlink" title="修改远端地址"></a>修改远端地址</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote origin set-url [url]</span><br><span class="line">git remote rm origin</span><br><span class="line">git remote add origin [url]</span><br></pre></td></tr></table></figure>
+
+<h3 id="git查看远程仓库地址命令"><a href="#git查看远程仓库地址命令" class="headerlink" title="git查看远程仓库地址命令"></a>git查看远程仓库地址命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git checkout -b &lt;local branch name&gt; origin/&lt;origin branch name&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
