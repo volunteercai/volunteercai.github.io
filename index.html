@@ -1573,6 +1573,9 @@
                 site.set('visitNumber', 0)
               }
               site.set("visitCount", site.get('visitCount') + 1)
+              
+              site_pv.innerText = site.get("visitCount")
+              site_uv.innerText = site.get("visitNumber")
 
               var logKey = siteUrl + ":" + returnCitySN["cip"];
               new AV.Query(SiteVisitLog).equalTo("key", logKey).find({
