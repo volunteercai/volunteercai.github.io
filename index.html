@@ -339,7 +339,6 @@
 
                         article.set("readCount", article.get("readCount") + 1)
                         article.set("title", "火影忍者-青鸟")
-                        article.save()
                       } else {
                         if(isListPage) return
 
@@ -348,11 +347,12 @@
                         article.set("readCount", 1)
                         article.set("title", "火影忍者-青鸟")
                         article.set("readNumber", 0)
-                        article.save()
                       }
 
                       $('[path="/blog/2020/04/20/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85-%E9%9D%92%E9%B8%9F/"] .post-read-number').text(article.get('readNumber'))
                       $('[path="/blog/2020/04/20/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85-%E9%9D%92%E9%B8%9F/"] .post-read-count').text(article.get('readCount'))
+
+                      if(!returnCitySN) article.save()
 
                       // 添加阅读人数
                       var ArticleReadLog = AV.Object.extend("ArticleReadLog")
@@ -361,7 +361,6 @@
                         success: function (logs) {
                           if ( logs.length == 0 ) {
                             article.set("readNumber", article.get("readNumber") + 1)
-                            article.save()
 
                             var articleReadLog = new ArticleReadLog();
                             articleReadLog.set("key", logKey)
@@ -369,6 +368,8 @@
                             articleReadLog.set("city", returnCitySN['cname'])
                             articleReadLog.save()
                           }
+
+                          article.save()
                           $('[path="/blog/2020/04/20/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85-%E9%9D%92%E9%B8%9F/"] .post-read-number').text(article.get('readNumber'))
                         }
                       })
@@ -569,7 +570,6 @@
 
                         article.set("readCount", article.get("readCount") + 1)
                         article.set("title", "git常用命令总结分享")
-                        article.save()
                       } else {
                         if(isListPage) return
 
@@ -578,11 +578,12 @@
                         article.set("readCount", 1)
                         article.set("title", "git常用命令总结分享")
                         article.set("readNumber", 0)
-                        article.save()
                       }
 
                       $('[path="/blog/2020/04/17/git%E5%91%BD%E4%BB%A4/"] .post-read-number').text(article.get('readNumber'))
                       $('[path="/blog/2020/04/17/git%E5%91%BD%E4%BB%A4/"] .post-read-count').text(article.get('readCount'))
+
+                      if(!returnCitySN) article.save()
 
                       // 添加阅读人数
                       var ArticleReadLog = AV.Object.extend("ArticleReadLog")
@@ -591,7 +592,6 @@
                         success: function (logs) {
                           if ( logs.length == 0 ) {
                             article.set("readNumber", article.get("readNumber") + 1)
-                            article.save()
 
                             var articleReadLog = new ArticleReadLog();
                             articleReadLog.set("key", logKey)
@@ -599,6 +599,8 @@
                             articleReadLog.set("city", returnCitySN['cname'])
                             articleReadLog.save()
                           }
+
+                          article.save()
                           $('[path="/blog/2020/04/17/git%E5%91%BD%E4%BB%A4/"] .post-read-number').text(article.get('readNumber'))
                         }
                       })
@@ -799,7 +801,6 @@
 
                         article.set("readCount", article.get("readCount") + 1)
                         article.set("title", "idea 热部署插件jrebel 的 安装 和 激活")
-                        article.save()
                       } else {
                         if(isListPage) return
 
@@ -808,11 +809,12 @@
                         article.set("readCount", 1)
                         article.set("title", "idea 热部署插件jrebel 的 安装 和 激活")
                         article.set("readNumber", 0)
-                        article.save()
                       }
 
                       $('[path="/blog/2020/04/17/Jrebel%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%BF%80%E6%B4%BB/"] .post-read-number').text(article.get('readNumber'))
                       $('[path="/blog/2020/04/17/Jrebel%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%BF%80%E6%B4%BB/"] .post-read-count').text(article.get('readCount'))
+
+                      if(!returnCitySN) article.save()
 
                       // 添加阅读人数
                       var ArticleReadLog = AV.Object.extend("ArticleReadLog")
@@ -821,7 +823,6 @@
                         success: function (logs) {
                           if ( logs.length == 0 ) {
                             article.set("readNumber", article.get("readNumber") + 1)
-                            article.save()
 
                             var articleReadLog = new ArticleReadLog();
                             articleReadLog.set("key", logKey)
@@ -829,6 +830,8 @@
                             articleReadLog.set("city", returnCitySN['cname'])
                             articleReadLog.save()
                           }
+
+                          article.save()
                           $('[path="/blog/2020/04/17/Jrebel%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%BF%80%E6%B4%BB/"] .post-read-number').text(article.get('readNumber'))
                         }
                       })
@@ -1043,7 +1046,6 @@
 
                         article.set("readCount", article.get("readCount") + 1)
                         article.set("title", "微服务gateway增加文件上传大小限制")
-                        article.save()
                       } else {
                         if(isListPage) return
 
@@ -1052,11 +1054,12 @@
                         article.set("readCount", 1)
                         article.set("title", "微服务gateway增加文件上传大小限制")
                         article.set("readNumber", 0)
-                        article.save()
                       }
 
                       $('[path="/blog/2020/04/16/%E5%BE%AE%E6%9C%8D%E5%8A%A1gateway%E5%A2%9E%E5%8A%A0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/"] .post-read-number').text(article.get('readNumber'))
                       $('[path="/blog/2020/04/16/%E5%BE%AE%E6%9C%8D%E5%8A%A1gateway%E5%A2%9E%E5%8A%A0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/"] .post-read-count').text(article.get('readCount'))
+
+                      if(!returnCitySN) article.save()
 
                       // 添加阅读人数
                       var ArticleReadLog = AV.Object.extend("ArticleReadLog")
@@ -1065,7 +1068,6 @@
                         success: function (logs) {
                           if ( logs.length == 0 ) {
                             article.set("readNumber", article.get("readNumber") + 1)
-                            article.save()
 
                             var articleReadLog = new ArticleReadLog();
                             articleReadLog.set("key", logKey)
@@ -1073,6 +1075,8 @@
                             articleReadLog.set("city", returnCitySN['cname'])
                             articleReadLog.save()
                           }
+
+                          article.save()
                           $('[path="/blog/2020/04/16/%E5%BE%AE%E6%9C%8D%E5%8A%A1gateway%E5%A2%9E%E5%8A%A0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/"] .post-read-number').text(article.get('readNumber'))
                         }
                       })
@@ -1275,7 +1279,6 @@
 
                         article.set("readCount", article.get("readCount") + 1)
                         article.set("title", "教你怎么免费搭建hexo博客")
-                        article.save()
                       } else {
                         if(isListPage) return
 
@@ -1284,11 +1287,12 @@
                         article.set("readCount", 1)
                         article.set("title", "教你怎么免费搭建hexo博客")
                         article.set("readNumber", 0)
-                        article.save()
                       }
 
                       $('[path="/blog/2020/04/16/%E6%95%99%E4%BD%A0%E6%80%8E%E4%B9%88%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"] .post-read-number').text(article.get('readNumber'))
                       $('[path="/blog/2020/04/16/%E6%95%99%E4%BD%A0%E6%80%8E%E4%B9%88%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"] .post-read-count').text(article.get('readCount'))
+
+                      if(!returnCitySN) article.save()
 
                       // 添加阅读人数
                       var ArticleReadLog = AV.Object.extend("ArticleReadLog")
@@ -1297,7 +1301,6 @@
                         success: function (logs) {
                           if ( logs.length == 0 ) {
                             article.set("readNumber", article.get("readNumber") + 1)
-                            article.save()
 
                             var articleReadLog = new ArticleReadLog();
                             articleReadLog.set("key", logKey)
@@ -1305,6 +1308,8 @@
                             articleReadLog.set("city", returnCitySN['cname'])
                             articleReadLog.save()
                           }
+
+                          article.save()
                           $('[path="/blog/2020/04/16/%E6%95%99%E4%BD%A0%E6%80%8E%E4%B9%88%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"] .post-read-number').text(article.get('readNumber'))
                         }
                       })
@@ -1573,11 +1578,11 @@
                 site.set('visitNumber', 0)
               }
               site.set("visitCount", site.get('visitCount') + 1)
-              site.save()
-              
               site_pv.innerText = site.get("visitCount")
               site_uv.innerText = site.get("visitNumber")
 
+              if(!returnCitySN) site.save()
+              
               var logKey = siteUrl + ":" + returnCitySN["cip"];
               new AV.Query(SiteVisitLog).equalTo("key", logKey).find({
                 success: function (logs) {

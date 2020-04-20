@@ -339,7 +339,6 @@
 
                         article.set("readCount", article.get("readCount") + 1)
                         article.set("title", "搭建Hexo博客前置条件 与 书写软件")
-                        article.save()
                       } else {
                         if(isListPage) return
 
@@ -348,11 +347,12 @@
                         article.set("readCount", 1)
                         article.set("title", "搭建Hexo博客前置条件 与 书写软件")
                         article.set("readNumber", 0)
-                        article.save()
                       }
 
                       $('[path="/blog/2020/04/15/Hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"] .post-read-number').text(article.get('readNumber'))
                       $('[path="/blog/2020/04/15/Hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"] .post-read-count').text(article.get('readCount'))
+
+                      if(!returnCitySN) article.save()
 
                       // 添加阅读人数
                       var ArticleReadLog = AV.Object.extend("ArticleReadLog")
@@ -361,7 +361,6 @@
                         success: function (logs) {
                           if ( logs.length == 0 ) {
                             article.set("readNumber", article.get("readNumber") + 1)
-                            article.save()
 
                             var articleReadLog = new ArticleReadLog();
                             articleReadLog.set("key", logKey)
@@ -369,6 +368,8 @@
                             articleReadLog.set("city", returnCitySN['cname'])
                             articleReadLog.save()
                           }
+
+                          article.save()
                           $('[path="/blog/2020/04/15/Hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"] .post-read-number').text(article.get('readNumber'))
                         }
                       })
@@ -636,11 +637,11 @@ https://git-scm.com/
                 site.set('visitNumber', 0)
               }
               site.set("visitCount", site.get('visitCount') + 1)
-              site.save()
-              
               site_pv.innerText = site.get("visitCount")
               site_uv.innerText = site.get("visitNumber")
 
+              if(!returnCitySN) site.save()
+              
               var logKey = siteUrl + ":" + returnCitySN["cip"];
               new AV.Query(SiteVisitLog).equalTo("key", logKey).find({
                 success: function (logs) {
