@@ -18,6 +18,7 @@
 <p>还需了解下markdown的书写方式</p>
 </li>
 <li><p>sm.ms 图床</p>
+<p><a href="https://sm.ms/" target="_blank" rel="noopener">https://sm.ms/</a></p>
 <p>文章中需要用到的图片必须先上传服务器，然后才能显示，sm.ms是一个免费图床，上传图片后可以直接复制markdown的图片格式，然后复制到你的文章中</p>
 <p><a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/markdown/md-tutorial.html</a></p>
 </li>
@@ -114,7 +115,9 @@ ribbon:
   <entry>
     <title>教你怎么免费搭建hexo博客</title>
     <url>/blog/2020/04/16/%E6%95%99%E4%BD%A0%E6%80%8E%E4%B9%88%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h2 id="1-安装-执行前先安装nodejs"><a href="#1-安装-执行前先安装nodejs" class="headerlink" title="1. 安装 执行前先安装nodejs"></a>1. 安装 执行前先安装nodejs</h2><p>随便找一个目录 打开控制台(cmd)</p>
+    <content><![CDATA[<h1 id="开始之前需要先阅读这篇文档"><a href="#开始之前需要先阅读这篇文档" class="headerlink" title="开始之前需要先阅读这篇文档"></a>开始之前需要先阅读这篇文档</h1><a href="/blog/2020/04/15/Hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="搭建Hexo博客前置条件 与 书写软件">搭建Hexo博客前置条件 与 书写软件</a>
+
+<h2 id="1-安装-执行前先安装nodejs"><a href="#1-安装-执行前先安装nodejs" class="headerlink" title="1. 安装 执行前先安装nodejs"></a>1. 安装 执行前先安装nodejs</h2><p>随便找一个目录 打开控制台(cmd)</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-创建并运行hexo"><a href="#2-创建并运行hexo" class="headerlink" title="2. 创建并运行hexo"></a>2. 创建并运行hexo</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo init &lt;项目文件夹名称&gt;</span><br><span class="line">cd &lt;项目文件夹名称&gt;</span><br><span class="line">hexo serve</span><br></pre></td></tr></table></figure>
