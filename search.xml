@@ -6,6 +6,8 @@
     <content><![CDATA[<h2 id="在搭建hexo静态博客之前需要先安装一些软件，本地运行环境"><a href="#在搭建hexo静态博客之前需要先安装一些软件，本地运行环境" class="headerlink" title="在搭建hexo静态博客之前需要先安装一些软件，本地运行环境"></a>在搭建hexo静态博客之前需要先安装一些软件，本地运行环境</h2><ol>
 <li><p>下载并安装git</p>
 <p><a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+<p>用于替代cmd之类执行命令-提交代码</p>
+<p>执行命令用法-在目录下 右键-&gt;git bash</p>
 </li>
 <li><p>下载nodejs</p>
 <p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></p>
