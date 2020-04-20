@@ -469,11 +469,51 @@
 
 
 
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span>总访问量<span id="site_pv">1</span>次</span>
     <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span>总访客<span id="site_uv">1</span>人</span>
+
+    <script>
+        (function(){
+          var Site = AV.Object.extend("Site")
+          var SiteVisitLog = AV.Object.extend("SiteVisitLog")
+          var siteUrl = "https://caixy.gitee.io/blog/"
+  
+          new AV.Query(Site).equalTo("url",siteUrl).find({
+            success: function(sites) {
+              var site = null
+              if ( sites.length > 0 ) {
+                site = sites[0]
+              } else {
+                site = new Site()
+                site.set('url', siteUrl)
+                site.set('visitCount', 0)
+                site.set('visitNumber', 0)
+              }
+              site.set("visitCount", site.get('visitCount') + 1)
+
+              var logKey = siteUrl + ":" + returnCitySN["cip"];
+              new AV.Query(SiteVisitLog).equalTo("key", logKey).find({
+                success: function (logs) {
+                  if ( logs.length == 0 ) {
+                    site.set("visitNumber", site.get('visitNumber') + 1)
+
+                    var siteVisitLog = new SiteVisitLog();
+                    siteVisitLog.set("key", logKey)
+                    siteVisitLog.set("ip", returnCitySN['cip'])
+                    siteVisitLog.set("city", returnCitySN['cname'])
+                    siteVisitLog.save()
+                  }
+                  site.save()
+
+                  site_pv.innerText = site.get("visitCount")
+                  site_uv.innerText = site.get("visitNumber")
+                }
+              })
+            }
+          })
+        })()
+    </script>
 
 
 
